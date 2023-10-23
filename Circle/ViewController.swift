@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let pushName: String = "這是第一次push"
+    let pushName: String = "這是第二次push"
 
     override func viewDidLoad() {
         super.viewDidLoad()
