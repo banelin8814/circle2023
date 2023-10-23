@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let pushName: String = "這是第一次push"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,4 +20,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
