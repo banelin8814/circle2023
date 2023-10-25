@@ -4,98 +4,164 @@
 //
 //  Created by 林佑淳 on 2023/10/23.
 //
-
-import UIKit
 import AVFoundation
+import UIKit
 
 class ViewController: UIViewController {
     
 
-    @IBOutlet weak var cameraView: UIImageView!
+    // Capture Session     // 屬性，用於儲存攝影機捕捉的影像
+    var session: AVCaptureSession?
+    // Photo Output     // 輸出，用於將攝影機捕捉的影像輸出到螢幕上
+    let output = AVCapturePhotoOutput()
+    // Video Preview     // 視窗圖層，用於顯示攝影機捕捉的影像
+    let previewlayer = AVCaptureVideoPreviewLayer()
+    // Shutter button   //快門按鍵外觀
+    let shutterbutton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        button.layer.cornerRadius = 50
+        button.layer.borderWidth = 10
+        button.layer.borderColor = UIColor.white.cgColor
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
         
-       
+        //加入sublayer，是相機視窗//將視窗圖層添加到視圖上
+        view.layer.addSublayer(previewlayer)
+        //加入subview，是快門按鍵//將快門按鈕添加到視圖上
+        view.addSubview(shutterbutton)
+        //快門按鍵功能//設定快門按鈕的點擊事件
+        shutterbutton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
         
-        let captureSession = AVCaptureSession()
+        // 設定快門按鈕的點擊事件
+        checkCameraPermissions()
         
-        var isAuthorized: Bool {
-            get async {//非同步存取的計算屬性。表示屬性的值可能不是立即可用的，需要一段時間才能計算出來。
-              
-                //函式會返回使用者對攝影機的存取權限狀態。
-                let status = AVCaptureDevice.authorizationStatus(for: .video)
+        
+        
+    }
+    // viewDidLayoutSubviews() 方法，在視圖布局完成時被呼叫
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        //MARK: - 首頁標籤
+
+
+        
+        //相機視窗
+        previewlayer.frame = CGRect(x: 0, y:0, width: view.frame.size.width * 0.7, height: view.frame.size.height * 0.6)
+
+        previewlayer.cornerRadius = 50
+        
+        
+        //快門按鍵位置
+        shutterbutton.center = CGPointMake(view.frame.size.width/2, view.frame.size.height - 130)
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //MARK: -  確認許可
+
+    private func checkCameraPermissions() {
+        switch AVCaptureDevice.authorizationStatus(for: .video){
+            
+        case .notDetermined:
+            //要求存取
+            AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
+                guard granted else {
+                    return
+                } //weak 防止記憶體洩漏，記憶體外漏是指一個物件仍然存在於記憶體中，但它已經不再被使用。
                 
-                var isAuthorized = status == .authorized  //status ==.authorized也就是true，status !== authorized就是false
-                
-           
-                if status == .notDetermined { //尚未決定使用者的存取權限狀態
-                    
-                    isAuthorized = await AVCaptureDevice.requestAccess(for: .video)
-                    //使用 await 關鍵字後，程式碼會被掛起，直到 AVCaptureDevice.requestAccess(for: .video) 函式完成。
-                    //當函式完成時，isAuthorized 變數的值將被設定為 true 或 false，程式碼將繼續執行。
+                DispatchQueue.main.async {
+                    self?.setUpCamera()
                 }
-                
-                return isAuthorized
             }
+        case .restricted:
+            break
+        case .denied:
+            break
+        case .authorized:
+            setUpCamera() //授權了就可以來設置相機
+        @unknown default:
+            break
         }
-        
-
-        func setUpCaptureSession() async { //非同步函式
-            guard await isAuthorized else { return } //true/false，使用者未授權攝影機存取權限，則程式碼將直接返回
-            //使用 await 關鍵字後，程式碼會被掛起
-            //guard...else文法：如果條件為真，則程式碼會繼續執行。如果條件為假，則程式碼會跳轉到 else 分支，或直接返回
-            
-        }
-
-        captureSession.beginConfiguration()// 開始攝影機擷取會話的配置
-        
-        
-        //MARK: - canAddInput
-
-        let videoDevice = AVCaptureDevice.default(.builtInDualCamera,for: .video,position: .unspecified)
-        
-        guard
-            let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice!), //是否可以建立一個攝影機輸入，try失敗一定是返回nil
-            captureSession.canAddInput(videoDeviceInput)//"攝影機擷取會話"是否可以添加該輸入
-            //如果以上兩個條件都為真，則程式碼會繼續執行。如果兩個條件都為假，則程式碼會跳轉到
-            else { return }
-        captureSession.addInput(videoDeviceInput)//將"攝影機輸入"添加到"攝影機擷取會話"中。
-        
-        
-        
-        
-        //MARK: - canAddOutput
-
-        let photoOutput = AVCapturePhotoOutput()
-        guard captureSession.canAddOutput(photoOutput) else { return } //檢查是否可以將攝影機照片輸出物件添加到攝影機擷取會話中
-        captureSession.sessionPreset = .photo //表示攝影機擷取會話將以最佳設定拍攝照片
-        captureSession.addOutput(photoOutput) //將 photoOutput 輸出添加到攝影機擷取會話中。
-       
-        captureSession.commitConfiguration() // 提交攝影機擷取會話的配置
-        
-        
-        //MARK: - 預覽畫面
-
-        class PreviewView: UIView {
-
-            override class var layerClass: AnyClass {
-                return AVCaptureVideoPreviewLayer.self //指定視圖應該使用AVCaptureVideoPreviewLayer圖層類別。
-            }
-            
-            /// Convenience wrapper to get layer as its statically known type.
-            var videoPreviewLayer: AVCaptureVideoPreviewLayer {
-                return layer as! AVCaptureVideoPreviewLayer
-            }
-        }
-        
-     
-
+        //MARK: - 設置相機
 
     }
     
-   
+    //MARK: - 設置相機
+
+    private func setUpCamera(){
+        let coolSession = AVCaptureSession()
+        if let coolDevice = AVCaptureDevice.default(for: .video){ //如果可以實例化device，就往以下步驟操作
+            do{
+                let input = try AVCaptureDeviceInput(device: coolDevice)
+                if coolSession.canAddInput(input){
+                    coolSession.addInput(input)
+                }
+                
+                if coolSession.canAddOutput(output){
+                    coolSession.addOutput(output)
+                }
+                
+                previewlayer.videoGravity = .resizeAspectFill //調整縱橫比填滿
+                previewlayer.session = coolSession
+                
+                coolSession.startRunning()
+                self.session = coolSession //retain to globol
+            }
+            catch{
+                print("錯誤")
+            }
+            
+        }
+    }
     
     
+    @objc private func didTapTakePhoto(){
+        output.capturePhoto(with: AVCapturePhotoSettings(),
+                            delegate: self)
+    }
 }
+
+extension ViewController: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard let coolData = photo.fileDataRepresentation() else {
+            return
+        }
+        let coolImage = UIImage(data: coolData)
+        
+        session?.stopRunning()
+        
+        let imageView = UIImageView(image: coolImage)
+        imageView.contentMode = .scaleAspectFill
+        imageView.frame = view.bounds
+        view.addSubview(imageView)
+    }
+}
+
+
+
+
+//MARK: - 預覽
+//#Preview{
+//    let controller1 = ViewController()
+//    return controller1
+//}
+//
+
