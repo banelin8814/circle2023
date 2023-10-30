@@ -7,8 +7,11 @@
 import AVFoundation
 import UIKit
 
-class ViewController: UIViewController {
+class TakePhotoViewController: UIViewController {
     
+    
+    
+   
 
     // Capture Session     // 屬性，用於儲存攝影機捕捉的影像
     var session: AVCaptureSession?
@@ -27,6 +30,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         view.backgroundColor = .white
         
@@ -139,7 +144,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: AVCapturePhotoCaptureDelegate {
+extension TakePhotoViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let coolData = photo.fileDataRepresentation() else {
             return
