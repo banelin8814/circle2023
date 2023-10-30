@@ -45,6 +45,7 @@
 		1B783E782AE6942D005252A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B783E762AE6942D005252A8 /* Main.storyboard */; };
 		1B783E7A2AE6942E005252A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B783E792AE6942E005252A8 /* Assets.xcassets */; };
 		1B783E7D2AE6942E005252A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B783E7B2AE6942E005252A8 /* LaunchScreen.storyboard */; };
+		1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		1B783E792AE6942E005252A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B783E7C2AE6942E005252A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B783E7E2AE6942E005252A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B23D7492AEE5925003C4CF5 /* Controller */ = {
+		1B23D7492AEE5925003C4CF5 /* LoginPageController */ = {
 			isa = PBXGroup;
 			children = (
 				1B23D74C2AEE5F7C003C4CF5 /* WelcomeViewController.swift */,
 				1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */,
 				1B23D7502AEE5FE2003C4CF5 /* LoginViewController.swift */,
-				1B783E742AE6942D005252A8 /* TakePhotoViewController.swift */,
 			);
-			path = Controller;
+			path = LoginPageController;
 			sourceTree = "<group>";
 		};
 		1B23D74A2AEE5943003C4CF5 /* View */ = {
@@ -150,7 +151,8 @@
 				1B783E722AE6942D005252A8 /* SceneDelegate.swift */,
 				1B23D74B2AEE5951003C4CF5 /* Model */,
 				1B23D74A2AEE5943003C4CF5 /* View */,
-				1B23D7492AEE5925003C4CF5 /* Controller */,
+				1BFDD6832AEF928D0067EFF9 /* TapBarController */,
+				1B23D7492AEE5925003C4CF5 /* LoginPageController */,
 				1B23D70A2AEE4FE5003C4CF5 /* GoogleService-Info.plist */,
 				1B783E792AE6942E005252A8 /* Assets.xcassets */,
 				1B783E7B2AE6942E005252A8 /* LaunchScreen.storyboard */,
@@ -158,6 +160,15 @@
 				1B23D7522AEE63C5003C4CF5 /* Contants.swift */,
 			);
 			path = Circle;
+			sourceTree = "<group>";
+		};
+		1BFDD6832AEF928D0067EFF9 /* TapBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1B783E742AE6942D005252A8 /* TakePhotoViewController.swift */,
+				1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */,
+			);
+			path = TapBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 				1B783E752AE6942D005252A8 /* TakePhotoViewController.swift in Sources */,
 				1B23D74F2AEE5FBC003C4CF5 /* RegisterViewController.swift in Sources */,
 				1B23D7532AEE63C5003C4CF5 /* Contants.swift in Sources */,
+				1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */,
 				1B783E712AE6942D005252A8 /* AppDelegate.swift in Sources */,
 				1B23D74D2AEE5F7C003C4CF5 /* WelcomeViewController.swift in Sources */,
 				1B783E732AE6942D005252A8 /* SceneDelegate.swift in Sources */,

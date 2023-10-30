@@ -11,6 +11,6 @@ struct K {
     static let appName = "Circle"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
-    static let registerSegue = "RegisterToChat"
-    static let loginSegue = "LoginToChat"
+    static let registerSegue = "RegisterToTakePhoto"
+    static let loginSegue = "LoginToTakePhoto"
 }

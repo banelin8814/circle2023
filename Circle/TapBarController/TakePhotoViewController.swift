@@ -54,12 +54,15 @@ class TakePhotoViewController: UIViewController {
         
         //MARK: - 首頁標籤
 
-
+        let width = view.frame.size.width
+        let height = view.frame.size.height
+        let size = min(width, height) * 0.5
         
         //相機視窗
-        previewlayer.frame = CGRect(x: 0, y:0, width: view.frame.size.width * 0.7, height: view.frame.size.height * 0.6)
+        previewlayer.frame = CGRect(x: (width - size) / 2, y:(height - size) / 2, width: view.frame.size.width * 0.5, height: view.frame.size.height * 0.5)
 
         previewlayer.cornerRadius = 50
+        
         
         
         //快門按鍵位置

@@ -9,9 +9,11 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {   //override 覆蓋。 super繼承
+
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
     }
