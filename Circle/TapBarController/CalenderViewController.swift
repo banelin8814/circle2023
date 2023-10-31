@@ -66,7 +66,7 @@ extension CalenderViewController: UICalendarViewDelegate {
             let imageView = UIImageView()
             
             // 設置照片的圖像
-            imageView.image = UIImage(coolImage)
+//            imageView.image = UIImage(coolImage)
             
             // 返回 UIImageView 物件
             return imageView

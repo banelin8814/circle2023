@@ -6,37 +6,37 @@
 //
 
 import UIKit
-
+ 
 class WelcomeViewController: UIViewController {
     
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    override func viewWillAppear(_ animated: Bool) {   //override 覆蓋。 super繼承
+    private lazy var personVw: PersonView = {
+        let vw = PersonView {[weak self] in
+            self?.sayHello()
+        }
+        return vw
+    }()
 
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.isNavigationBarHidden = false
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = ""
-        var charIndex = 0.0
-        let titleText = K.appName
-        for letter in titleText {
-            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
-                self.titleLabel.text?.append(letter)
-            }
-            charIndex += 1
-        }
-       
+        setup()
     }
-    
+}
 
+
+private extension WelcomeViewController {
+    func setup() {
+        self.view.backgroundColor = .white
+        
+        self.view.addSubview(personVw)
+        self.view.addSubview(personVw)
+        NSLayoutConstraint.activate([
+        personVw.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        personVw.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8), personVw.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+        ])
+    }
+    func sayHello(){
+        print("幹")
+    }
 }
