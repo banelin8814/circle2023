@@ -36,25 +36,7 @@ class CalenderViewController: UIViewController {
             myCalenderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
             
         ])
-        
         var wantsDateDecorations = myCalenderView.wantsDateDecorations
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
 }
 
@@ -72,5 +54,4 @@ extension CalenderViewController: UICalendarViewDelegate {
             return imageView
         }
     }
-    
 }

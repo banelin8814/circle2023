@@ -35,7 +35,7 @@
 		1B23D73E2AEE5165003C4CF5 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23D73D2AEE5165003C4CF5 /* FirebaseRemoteConfigSwift */; };
 		1B23D7402AEE5165003C4CF5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23D73F2AEE5165003C4CF5 /* FirebaseStorage */; };
 		1B23D7422AEE5165003C4CF5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23D7412AEE5165003C4CF5 /* FirebaseStorageCombine-Community */; };
-		1B23D74D2AEE5F7C003C4CF5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D74C2AEE5F7C003C4CF5 /* WelcomeViewController.swift */; };
+		1B23D74D2AEE5F7C003C4CF5 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D74C2AEE5F7C003C4CF5 /* PeopleViewController.swift */; };
 		1B23D74F2AEE5FBC003C4CF5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */; };
 		1B23D7512AEE5FE2003C4CF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D7502AEE5FE2003C4CF5 /* LoginViewController.swift */; };
 		1B23D7532AEE63C5003C4CF5 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D7522AEE63C5003C4CF5 /* Contants.swift */; };
@@ -44,13 +44,16 @@
 		1B783E752AE6942D005252A8 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B783E742AE6942D005252A8 /* TakePhotoViewController.swift */; };
 		1B783E7A2AE6942E005252A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B783E792AE6942E005252A8 /* Assets.xcassets */; };
 		1B783E7D2AE6942E005252A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B783E7B2AE6942E005252A8 /* LaunchScreen.storyboard */; };
+		1B95D2582AF10AA600432271 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D2572AF10AA600432271 /* Model.swift */; };
+		1B95D25A2AF10C0100432271 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D2592AF10C0100432271 /* PeopleViewModel.swift */; };
+		1B95D25D2AF11A9600432271 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D25C2AF11A9600432271 /* PersonCollectionViewCell.swift */; };
 		1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */; };
 		1BFDD6892AF0D88F0067EFF9 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFDD6882AF0D88F0067EFF9 /* PersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B23D70A2AEE4FE5003C4CF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1B23D74C2AEE5F7C003C4CF5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1B23D74C2AEE5F7C003C4CF5 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1B23D7502AEE5FE2003C4CF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B23D7522AEE63C5003C4CF5 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		1B783E792AE6942E005252A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B783E7C2AE6942E005252A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B783E7E2AE6942E005252A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B95D2572AF10AA600432271 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1B95D2592AF10C0100432271 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		1B95D25C2AF11A9600432271 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
 		1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		1BFDD6882AF0D88F0067EFF9 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +112,7 @@
 		1B23D7492AEE5925003C4CF5 /* LoginPageController */ = {
 			isa = PBXGroup;
 			children = (
-				1B23D74C2AEE5F7C003C4CF5 /* WelcomeViewController.swift */,
+				1B23D74C2AEE5F7C003C4CF5 /* PeopleViewController.swift */,
 				1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */,
 				1B23D7502AEE5FE2003C4CF5 /* LoginViewController.swift */,
 			);
@@ -116,6 +122,8 @@
 		1B23D74A2AEE5943003C4CF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1BFDD6882AF0D88F0067EFF9 /* PersonView.swift */,
+				1B95D25C2AF11A9600432271 /* PersonCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 		1B23D74B2AEE5951003C4CF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1B95D2572AF10AA600432271 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,7 +157,7 @@
 			children = (
 				1B783E702AE6942D005252A8 /* AppDelegate.swift */,
 				1B783E722AE6942D005252A8 /* SceneDelegate.swift */,
-				1BFDD6882AF0D88F0067EFF9 /* PersonView.swift */,
+				1B95D25B2AF10C1400432271 /* ViewModel */,
 				1B23D74B2AEE5951003C4CF5 /* Model */,
 				1B23D74A2AEE5943003C4CF5 /* View */,
 				1BFDD6832AEF928D0067EFF9 /* TapBarController */,
@@ -160,6 +169,14 @@
 				1B23D7522AEE63C5003C4CF5 /* Contants.swift */,
 			);
 			path = Circle;
+			sourceTree = "<group>";
+		};
+		1B95D25B2AF10C1400432271 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B95D2592AF10C0100432271 /* PeopleViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1BFDD6832AEF928D0067EFF9 /* TapBarController */ = {
@@ -274,14 +291,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B95D25A2AF10C0100432271 /* PeopleViewModel.swift in Sources */,
 				1BFDD6892AF0D88F0067EFF9 /* PersonView.swift in Sources */,
 				1B23D7512AEE5FE2003C4CF5 /* LoginViewController.swift in Sources */,
 				1B783E752AE6942D005252A8 /* TakePhotoViewController.swift in Sources */,
 				1B23D74F2AEE5FBC003C4CF5 /* RegisterViewController.swift in Sources */,
 				1B23D7532AEE63C5003C4CF5 /* Contants.swift in Sources */,
+				1B95D2582AF10AA600432271 /* Model.swift in Sources */,
+				1B95D25D2AF11A9600432271 /* PersonCollectionViewCell.swift in Sources */,
 				1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */,
 				1B783E712AE6942D005252A8 /* AppDelegate.swift in Sources */,
-				1B23D74D2AEE5F7C003C4CF5 /* WelcomeViewController.swift in Sources */,
+				1B23D74D2AEE5F7C003C4CF5 /* PeopleViewController.swift in Sources */,
 				1B783E732AE6942D005252A8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
