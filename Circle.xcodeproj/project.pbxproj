@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B23A4922AFC866100F46509 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23A4912AFC866100F46509 /* SnapKit */; };
+		1B23A4942AFC866100F46509 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23A4932AFC866100F46509 /* SnapKit-Dynamic */; };
 		1B23D70B2AEE4FE5003C4CF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B23D70A2AEE4FE5003C4CF5 /* GoogleService-Info.plist */; };
 		1B23D70E2AEE5165003C4CF5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23D70D2AEE5165003C4CF5 /* FirebaseAnalytics */; };
 		1B23D7102AEE5165003C4CF5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23D70F2AEE5165003C4CF5 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -52,6 +54,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B23A4952AFC869900F46509 /* PeopleViewController.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PeopleViewController.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1B23A4962AFC86E400F46509 /* PeopleViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PeopleViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1B23A4972AFC870E00F46509 /* Model.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Model.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1B23A4982AFC876200F46509 /* PersonView.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PersonView.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1B23A4992AFC879000F46509 /* PersonViewCell.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PersonViewCell.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1B23D70A2AEE4FE5003C4CF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B23D74C2AEE5F7C003C4CF5 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +100,8 @@
 				1B23D7222AEE5165003C4CF5 /* FirebaseDatabaseSwift in Frameworks */,
 				1B23D72C2AEE5165003C4CF5 /* FirebaseFunctions in Frameworks */,
 				1B23D7422AEE5165003C4CF5 /* FirebaseStorageCombine-Community in Frameworks */,
+				1B23A4922AFC866100F46509 /* SnapKit in Frameworks */,
+				1B23A4942AFC866100F46509 /* SnapKit-Dynamic in Frameworks */,
 				1B23D73C2AEE5165003C4CF5 /* FirebaseRemoteConfig in Frameworks */,
 				1B23D7182AEE5165003C4CF5 /* FirebaseAppDistribution-Beta in Frameworks */,
 				1B23D71C2AEE5165003C4CF5 /* FirebaseAuthCombine-Community in Frameworks */,
@@ -112,7 +121,6 @@
 		1B23D7492AEE5925003C4CF5 /* LoginPageController */ = {
 			isa = PBXGroup;
 			children = (
-				1B23D74C2AEE5F7C003C4CF5 /* PeopleViewController.swift */,
 				1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */,
 				1B23D7502AEE5FE2003C4CF5 /* LoginViewController.swift */,
 			);
@@ -136,6 +144,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1B51E5492AFC8F5800BF64B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B23D74C2AEE5F7C003C4CF5 /* PeopleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1B783E642AE6942D005252A8 = {
 			isa = PBXGroup;
 			children = (
@@ -157,9 +173,10 @@
 			children = (
 				1B783E702AE6942D005252A8 /* AppDelegate.swift */,
 				1B783E722AE6942D005252A8 /* SceneDelegate.swift */,
+				1B51E5492AFC8F5800BF64B4 /* Controller */,
+				1B23D74A2AEE5943003C4CF5 /* View */,
 				1B95D25B2AF10C1400432271 /* ViewModel */,
 				1B23D74B2AEE5951003C4CF5 /* Model */,
-				1B23D74A2AEE5943003C4CF5 /* View */,
 				1BFDD6832AEF928D0067EFF9 /* TapBarController */,
 				1B23D7492AEE5925003C4CF5 /* LoginPageController */,
 				1B23D70A2AEE4FE5003C4CF5 /* GoogleService-Info.plist */,
@@ -167,6 +184,11 @@
 				1B783E7B2AE6942E005252A8 /* LaunchScreen.storyboard */,
 				1B783E7E2AE6942E005252A8 /* Info.plist */,
 				1B23D7522AEE63C5003C4CF5 /* Contants.swift */,
+				1B23A4952AFC869900F46509 /* PeopleViewController.playground */,
+				1B23A4982AFC876200F46509 /* PersonView.playground */,
+				1B23A4972AFC870E00F46509 /* Model.playground */,
+				1B23A4962AFC86E400F46509 /* PeopleViewModel.playground */,
+				1B23A4992AFC879000F46509 /* PersonViewCell.playground */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -232,6 +254,8 @@
 				1B23D73D2AEE5165003C4CF5 /* FirebaseRemoteConfigSwift */,
 				1B23D73F2AEE5165003C4CF5 /* FirebaseStorage */,
 				1B23D7412AEE5165003C4CF5 /* FirebaseStorageCombine-Community */,
+				1B23A4912AFC866100F46509 /* SnapKit */,
+				1B23A4932AFC866100F46509 /* SnapKit-Dynamic */,
 			);
 			productName = Circle;
 			productReference = 1B783E6D2AE6942D005252A8 /* Circle.app */;
@@ -263,6 +287,7 @@
 			mainGroup = 1B783E642AE6942D005252A8;
 			packageReferences = (
 				1B23D70C2AEE5165003C4CF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1B23A4902AFC866100F46509 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 1B783E6E2AE6942D005252A8 /* Products */;
 			projectDirPath = "";
@@ -525,6 +550,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1B23A4902AFC866100F46509 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 		1B23D70C2AEE5165003C4CF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -536,6 +569,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B23A4912AFC866100F46509 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B23A4902AFC866100F46509 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1B23A4932AFC866100F46509 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B23A4902AFC866100F46509 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
 		1B23D70D2AEE5165003C4CF5 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1B23D70C2AEE5165003C4CF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -1,21 +1,19 @@
-//
-//  Welcome2ViewController.swift
-//  Circle
-//
-//  Created by 林佑淳 on 2023/10/29.
-//
-
 import UIKit
 import SafariServices
  
 class PeopleViewController: UIViewController {
     
-    private let vm = PeopleViewModel()
+    private let theViewModel = PeopleViewModel()
     
-    private lazy var cv: UICollectionView = {
+    
+    private lazy var theCollectionView: UICollectionView = {
+        //先完成layout設定
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: UIScreen.main.bounds.width, height: 130)
+        
+        //實例化一個CollectionView
         let vw = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        //把cell註冊進CollectionView
         vw.register(PersonCollectionViewCell.self, forCellWithReuseIdentifier: "PersonCollectionViewCell")
         vw.dataSource = self //data來源
         
@@ -28,18 +26,20 @@ class PeopleViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        vm.delegate = self
-        vm.gerUsers()
+        theViewModel.delegate = self
+        theViewModel.gerUsers()
     }
 }
 
+
+//負責collectionV iew裡面的資料來源
 extension PeopleViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        vm.people.count
+        theViewModel.people.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = vm.people[indexPath.item]
+        let item = theViewModel.people[indexPath.item]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCollectionViewCell",
                                                       for: indexPath) as! PersonCollectionViewCell
         cell.delegate = self
@@ -61,8 +61,7 @@ extension PeopleViewController: PersonCollectionViewCellDelegate{
 
 extension PeopleViewController: PeopleViewModelDelegate{
     func didFinish() {
-        cv.reloadData() //reloadData()是collectionView裡面都有的功能
- 
+        theCollectionView.reloadData() //reloadData()是collectionView裡面都有的功能
     }
     
     func didFail(error: Error) {
@@ -71,20 +70,20 @@ extension PeopleViewController: PeopleViewModelDelegate{
 }
 
 //這邊都是負責畫面
-private extension PeopleViewController { //private是只有這個VC才可以用
+private extension PeopleViewController {
     func setupView() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.title = "林佑淳"
         self.view.backgroundColor = .white
         
-        self.view.addSubview(cv)
+        self.view.addSubview(theCollectionView)
         
         NSLayoutConstraint.activate([
             
-            cv.topAnchor.constraint(equalTo: view.topAnchor),
-            cv.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            cv.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            cv.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            theCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            theCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            theCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            theCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
 
         ])
     }
