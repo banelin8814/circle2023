@@ -10,9 +10,3 @@ import UIKit
 class PersonView: UIView {
     
 }
-private extension PersonView {
-    func setup(){
-
-
-    }
-}

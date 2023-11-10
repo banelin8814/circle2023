@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol PeopleViewModelDelegate: AnyObject {
-    
-}
-
 class PeopleViewModel {
     
    

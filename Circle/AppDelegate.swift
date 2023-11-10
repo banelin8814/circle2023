@@ -6,9 +6,7 @@
 //
 
 import UIKit
-import FirebaseCore
-import Firebase
-import FirebaseAuth
+
 
 
 @main
@@ -18,7 +16,6 @@ import FirebaseAuth
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        FirebaseApp.configure()
         
         return true
     }
