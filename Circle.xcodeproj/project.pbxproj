@@ -23,6 +23,9 @@
 		1B95D2582AF10AA600432271 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D2572AF10AA600432271 /* Model.swift */; };
 		1B95D25A2AF10C0100432271 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D2592AF10C0100432271 /* PeopleViewModel.swift */; };
 		1B95D25D2AF11A9600432271 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D25C2AF11A9600432271 /* PersonCollectionViewCell.swift */; };
+		1BA8B7632B05C54900F25535 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B7622B05C54900F25535 /* User.swift */; };
+		1BA8B7652B05C55A00F25535 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B7642B05C55A00F25535 /* Photo.swift */; };
+		1BA8B7672B05C56D00F25535 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B7662B05C56D00F25535 /* Location.swift */; };
 		1BB03D4A2AFDE4AF002B61C9 /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB03D492AFDE4AF002B61C9 /* SectionController.swift */; };
 		1BEC07342AFE4135000F6036 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC07332AFE4135000F6036 /* PostCell.swift */; };
 		1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */; };
@@ -51,6 +54,9 @@
 		1B95D2572AF10AA600432271 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1B95D2592AF10C0100432271 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		1B95D25C2AF11A9600432271 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
+		1BA8B7622B05C54900F25535 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1BA8B7642B05C55A00F25535 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		1BA8B7662B05C56D00F25535 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1BB03D492AFDE4AF002B61C9 /* SectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
 		1BEC07332AFE4135000F6036 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 		1B783E6F2AE6942D005252A8 /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				1BA8B7582B05B25D00F25535 /* NEW */,
 				1B783E702AE6942D005252A8 /* AppDelegate.swift */,
 				1B783E722AE6942D005252A8 /* SceneDelegate.swift */,
 				1BEC07332AFE4135000F6036 /* PostCell.swift */,
@@ -166,6 +173,128 @@
 				1B95D2592AF10C0100432271 /* PeopleViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1BA8B7582B05B25D00F25535 /* NEW */ = {
+			isa = PBXGroup;
+			children = (
+				1BA8B75F2B05B33700F25535 /* Data */,
+				1BA8B75E2B05B31B00F25535 /* Prestentation */,
+				1BA8B75B2B05B29B00F25535 /* Domain */,
+			);
+			path = NEW;
+			sourceTree = "<group>";
+		};
+		1BA8B7592B05B26800F25535 /* Enteties */ = {
+			isa = PBXGroup;
+			children = (
+				1BA8B7622B05C54900F25535 /* User.swift */,
+				1BA8B7642B05C55A00F25535 /* Photo.swift */,
+				1BA8B7662B05C56D00F25535 /* Location.swift */,
+			);
+			path = Enteties;
+			sourceTree = "<group>";
+		};
+		1BA8B75A2B05B28B00F25535 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		1BA8B75B2B05B29B00F25535 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1BA8B75D2B05B2D300F25535 /* Interfaces */,
+				1BA8B75C2B05B2AE00F25535 /* Repository */,
+				1BA8B75A2B05B28B00F25535 /* Usecases */,
+				1BA8B7592B05B26800F25535 /* Enteties */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1BA8B75C2B05B2AE00F25535 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1BA8B75D2B05B2D300F25535 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		1BA8B75E2B05B31B00F25535 /* Prestentation */ = {
+			isa = PBXGroup;
+			children = (
+				1BA8B76C2B05D33A00F25535 /* Flows */,
+				1BA8B76B2B05CBAE00F25535 /* TabBarCoordinator */,
+				1BA8B76A2B05CB9500F25535 /* ShotPhotoScene */,
+				1BA8B7692B05CB8100F25535 /* ProfileScene */,
+				1BA8B7602B05B6F900F25535 /* PostScene */,
+			);
+			path = Prestentation;
+			sourceTree = "<group>";
+		};
+		1BA8B75F2B05B33700F25535 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1BA8B76E2B05DA7500F25535 /* Network */,
+				1BA8B7612B05B71400F25535 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1BA8B7602B05B6F900F25535 /* PostScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostScene;
+			sourceTree = "<group>";
+		};
+		1BA8B7612B05B71400F25535 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1BA8B7692B05CB8100F25535 /* ProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileScene;
+			sourceTree = "<group>";
+		};
+		1BA8B76A2B05CB9500F25535 /* ShotPhotoScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShotPhotoScene;
+			sourceTree = "<group>";
+		};
+		1BA8B76B2B05CBAE00F25535 /* TabBarCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBarCoordinator;
+			sourceTree = "<group>";
+		};
+		1BA8B76C2B05D33A00F25535 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		1BA8B76E2B05DA7500F25535 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		1BFDD6832AEF928D0067EFF9 /* TapBarController */ = {
@@ -310,14 +439,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA8B7652B05C55A00F25535 /* Photo.swift in Sources */,
 				1B95D25A2AF10C0100432271 /* PeopleViewModel.swift in Sources */,
 				1BB03D4A2AFDE4AF002B61C9 /* SectionController.swift in Sources */,
 				1BFDD6892AF0D88F0067EFF9 /* PersonView.swift in Sources */,
 				1B23D7512AEE5FE2003C4CF5 /* LoginViewController.swift in Sources */,
+				1BA8B7672B05C56D00F25535 /* Location.swift in Sources */,
 				1B783E752AE6942D005252A8 /* TakePhotoViewController.swift in Sources */,
 				1B23D74F2AEE5FBC003C4CF5 /* RegisterViewController.swift in Sources */,
 				1B23D7532AEE63C5003C4CF5 /* Contants.swift in Sources */,
 				1BEC07342AFE4135000F6036 /* PostCell.swift in Sources */,
+				1BA8B7632B05C54900F25535 /* User.swift in Sources */,
 				1B95D2582AF10AA600432271 /* Model.swift in Sources */,
 				1B95D25D2AF11A9600432271 /* PersonCollectionViewCell.swift in Sources */,
 				1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */,
