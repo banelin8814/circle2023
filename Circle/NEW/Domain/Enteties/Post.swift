@@ -15,5 +15,5 @@ struct Post {
     var likeUserIDs: [String]
     var commentIDs: [String]
     var location: Location?
-
+        
 }

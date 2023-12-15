@@ -15,8 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    
+
     @IBAction func registerButton(_ sender: UIButton) {
         
         

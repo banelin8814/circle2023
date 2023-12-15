@@ -8,10 +8,6 @@ import AVFoundation
 import UIKit
 
 class TakePhotoViewController: UIViewController {
-    
-    
-    
-   
 
     // Capture Session     // 屬性，用於儲存攝影機捕捉的影像
     var session: AVCaptureSession?
@@ -33,7 +29,7 @@ class TakePhotoViewController: UIViewController {
         
         
         
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         
         //加入sublayer，是相機視窗//將視窗圖層添加到視圖上
         view.layer.addSublayer(previewlayer)

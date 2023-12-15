@@ -6,24 +6,74 @@
 //
 
 import UIKit
+import IGListKit
 
 class PostViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.prefersLargeTitles = true
+        setup()
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    private var adapter: ListAdapter?
+    
+    
+    private func setup() {
+        let collectionView = createCollectionView()
+        let updater = ListAdapterUpdater()
+        let adapter = ListAdapter(updater: updater, viewController: self)
+        adapter.collectionView = collectionView
+        adapter.dataSource = self
+        self.adapter = adapter
     }
-    */
+    
+    //    (updater: IGListAdapterUpdater(), viewController: self)
+    
+    private func createCollectionView () -> UICollectionView {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 20
+        layout.minimumLineSpacing = 20
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .black
+        view.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        return collectionView
+    }
+    
+}
 
+
+    
+    
+    
+    
+  
+
+
+
+extension PostViewController: ListAdapterDataSource {
+      
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        let data: [NSString] = ["Apple", "Facebook" , "Google", "Amazon"]
+        return data
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return LabelSectionController()
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        return nil
+    }
+    
+    
 }

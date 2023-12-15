@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B23A4922AFC866100F46509 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23A4912AFC866100F46509 /* SnapKit */; };
-		1B23A4942AFC866100F46509 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23A4932AFC866100F46509 /* SnapKit-Dynamic */; };
 		1B23D70B2AEE4FE5003C4CF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B23D70A2AEE4FE5003C4CF5 /* GoogleService-Info.plist */; };
-		1B23D74D2AEE5F7C003C4CF5 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D74C2AEE5F7C003C4CF5 /* PostViewController.swift */; };
 		1B23D74F2AEE5FBC003C4CF5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */; };
 		1B23D7512AEE5FE2003C4CF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D7502AEE5FE2003C4CF5 /* LoginViewController.swift */; };
 		1B23D7532AEE63C5003C4CF5 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D7522AEE63C5003C4CF5 /* Contants.swift */; };
@@ -23,27 +21,26 @@
 		1B95D2582AF10AA600432271 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D2572AF10AA600432271 /* Model.swift */; };
 		1B95D25A2AF10C0100432271 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D2592AF10C0100432271 /* PeopleViewModel.swift */; };
 		1B95D25D2AF11A9600432271 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95D25C2AF11A9600432271 /* PersonCollectionViewCell.swift */; };
-		1BA8B7632B05C54900F25535 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B7622B05C54900F25535 /* User.swift */; };
-		1BA8B7672B05C56D00F25535 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B7662B05C56D00F25535 /* Location.swift */; };
-		1BA8B81F2B078BE100F25535 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B81E2B078BE100F25535 /* Post.swift */; };
-		1BA8B8212B078C7900F25535 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8202B078C7900F25535 /* Comment.swift */; };
-		1BA8B8232B078FE200F25535 /* CreatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8222B078FE200F25535 /* CreatePost.swift */; };
-		1BA8B8252B078FF800F25535 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8242B078FF800F25535 /* RegisterUser.swift */; };
-		1BA8B8272B07913000F25535 /* AddFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8262B07913000F25535 /* AddFriend.swift */; };
-		1BA8B8292B07913900F25535 /* EnableGPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8282B07913900F25535 /* EnableGPS.swift */; };
-		1BA8B82B2B07914B00F25535 /* TakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B82A2B07914B00F25535 /* TakePhoto.swift */; };
-		1BA8B82D2B07915900F25535 /* UpdateUserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B82C2B07915900F25535 /* UpdateUserLocation.swift */; };
-		1BA8B82F2B07916500F25535 /* CheckLocationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B82E2B07916500F25535 /* CheckLocationPermission.swift */; };
-		1BA8B8312B0791AC00F25535 /* CheckProximityWithFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8302B0791AC00F25535 /* CheckProximityWithFriend.swift */; };
-		1BA8B8332B07926C00F25535 /* ViewPostsOnCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8322B07926C00F25535 /* ViewPostsOnCalendar.swift */; };
-		1BA8B8362B07933A00F25535 /* FetchFriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8352B07933A00F25535 /* FetchFriendList.swift */; };
-		1BA8B8382B07935900F25535 /* GrantPhotoPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8372B07935900F25535 /* GrantPhotoPermission.swift */; };
-		1BA8B83A2B08AA8A00F25535 /*  NotifyFriendsProximity .swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8B8392B08AA8A00F25535 /*  NotifyFriendsProximity .swift */; };
-		1BB03D4A2AFDE4AF002B61C9 /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB03D492AFDE4AF002B61C9 /* SectionController.swift */; };
-		1BEC07342AFE4135000F6036 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC07332AFE4135000F6036 /* PostCell.swift */; };
+		1BF9BC762B2AF9A200D62B33 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9BC742B2AF9A200D62B33 /* PostViewController.swift */; };
+		1BF9BC792B2AF9F000D62B33 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9BC782B2AF9F000D62B33 /* Cell.swift */; };
+		1BF9BC7B2B2BFF9600D62B33 /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9BC7A2B2BFF9600D62B33 /* SectionController.swift */; };
+		1BF9BC802B2C530800D62B33 /* UserTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF9BC7F2B2C530800D62B33 /* UserTabBarController.swift */; };
 		1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */; };
 		1BFDD6892AF0D88F0067EFF9 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFDD6882AF0D88F0067EFF9 /* PersonView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1BF9BC7D2B2C400E00D62B33 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1586A7A0096776504373FFEE /* Pods_Circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +50,6 @@
 		1B23A4982AFC876200F46509 /* PersonView.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PersonView.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1B23A4992AFC879000F46509 /* PersonViewCell.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PersonViewCell.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1B23D70A2AEE4FE5003C4CF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1B23D74C2AEE5F7C003C4CF5 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1B23D7502AEE5FE2003C4CF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B23D7522AEE63C5003C4CF5 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
@@ -67,24 +63,10 @@
 		1B95D2572AF10AA600432271 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1B95D2592AF10C0100432271 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		1B95D25C2AF11A9600432271 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
-		1BA8B7622B05C54900F25535 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		1BA8B7662B05C56D00F25535 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		1BA8B81E2B078BE100F25535 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		1BA8B8202B078C7900F25535 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		1BA8B8222B078FE200F25535 /* CreatePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePost.swift; sourceTree = "<group>"; };
-		1BA8B8242B078FF800F25535 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
-		1BA8B8262B07913000F25535 /* AddFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriend.swift; sourceTree = "<group>"; };
-		1BA8B8282B07913900F25535 /* EnableGPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableGPS.swift; sourceTree = "<group>"; };
-		1BA8B82A2B07914B00F25535 /* TakePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhoto.swift; sourceTree = "<group>"; };
-		1BA8B82C2B07915900F25535 /* UpdateUserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserLocation.swift; sourceTree = "<group>"; };
-		1BA8B82E2B07916500F25535 /* CheckLocationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLocationPermission.swift; sourceTree = "<group>"; };
-		1BA8B8302B0791AC00F25535 /* CheckProximityWithFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckProximityWithFriend.swift; sourceTree = "<group>"; };
-		1BA8B8322B07926C00F25535 /* ViewPostsOnCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostsOnCalendar.swift; sourceTree = "<group>"; };
-		1BA8B8352B07933A00F25535 /* FetchFriendList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFriendList.swift; sourceTree = "<group>"; };
-		1BA8B8372B07935900F25535 /* GrantPhotoPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrantPhotoPermission.swift; sourceTree = "<group>"; };
-		1BA8B8392B08AA8A00F25535 /*  NotifyFriendsProximity .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = " NotifyFriendsProximity .swift"; path = "../../../../../ NotifyFriendsProximity .swift"; sourceTree = "<group>"; };
-		1BB03D492AFDE4AF002B61C9 /* SectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
-		1BEC07332AFE4135000F6036 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		1BF9BC742B2AF9A200D62B33 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		1BF9BC782B2AF9F000D62B33 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		1BF9BC7A2B2BFF9600D62B33 /* SectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
+		1BF9BC7F2B2C530800D62B33 /* UserTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabBarController.swift; sourceTree = "<group>"; };
 		1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		1BFDD6882AF0D88F0067EFF9 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		B66815C8BC959131D3F183F0 /* Pods-Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.release.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +80,6 @@
 			files = (
 				1B51E5552AFCE45F00BF64B4 /* Pods_Circle.framework in Frameworks */,
 				1B23A4922AFC866100F46509 /* SnapKit in Frameworks */,
-				1B23A4942AFC866100F46509 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +123,6 @@
 		1B51E5492AFC8F5800BF64B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1B23D74C2AEE5F7C003C4CF5 /* PostViewController.swift */,
-				1BB03D492AFDE4AF002B61C9 /* SectionController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,9 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				1BA8B7582B05B25D00F25535 /* NEW */,
-				1B783E702AE6942D005252A8 /* AppDelegate.swift */,
-				1B783E722AE6942D005252A8 /* SceneDelegate.swift */,
-				1BEC07332AFE4135000F6036 /* PostCell.swift */,
 				1B51E5492AFC8F5800BF64B4 /* Controller */,
 				1B23D74A2AEE5943003C4CF5 /* View */,
 				1B95D25B2AF10C1400432271 /* ViewModel */,
@@ -204,142 +180,28 @@
 		1BA8B7582B05B25D00F25535 /* NEW */ = {
 			isa = PBXGroup;
 			children = (
-				1BA8B75B2B05B29B00F25535 /* Domain */,
-				1BA8B75F2B05B33700F25535 /* Data */,
-				1BA8B75E2B05B31B00F25535 /* Prestentation */,
+				1BDAF6BC2B10A73B003D0765 /* Application */,
 			);
 			path = NEW;
 			sourceTree = "<group>";
 		};
-		1BA8B7592B05B26800F25535 /* Enteties */ = {
+		1BDAF6BC2B10A73B003D0765 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				1BA8B7622B05C54900F25535 /* User.swift */,
-				1BA8B81E2B078BE100F25535 /* Post.swift */,
-				1BA8B7662B05C56D00F25535 /* Location.swift */,
-				1BA8B8202B078C7900F25535 /* Comment.swift */,
+				1B783E702AE6942D005252A8 /* AppDelegate.swift */,
+				1B783E722AE6942D005252A8 /* SceneDelegate.swift */,
 			);
-			path = Enteties;
-			sourceTree = "<group>";
-		};
-		1BA8B75A2B05B28B00F25535 /* Usecases */ = {
-			isa = PBXGroup;
-			children = (
-				1BA8B8242B078FF800F25535 /* RegisterUser.swift */,
-				1BA8B8222B078FE200F25535 /* CreatePost.swift */,
-				1BA8B8262B07913000F25535 /* AddFriend.swift */,
-				1BA8B8282B07913900F25535 /* EnableGPS.swift */,
-				1BA8B82A2B07914B00F25535 /* TakePhoto.swift */,
-				1BA8B82C2B07915900F25535 /* UpdateUserLocation.swift */,
-				1BA8B82E2B07916500F25535 /* CheckLocationPermission.swift */,
-				1BA8B8302B0791AC00F25535 /* CheckProximityWithFriend.swift */,
-				1BA8B8322B07926C00F25535 /* ViewPostsOnCalendar.swift */,
-				1BA8B8352B07933A00F25535 /* FetchFriendList.swift */,
-				1BA8B8392B08AA8A00F25535 /*  NotifyFriendsProximity .swift */,
-				1BA8B8372B07935900F25535 /* GrantPhotoPermission.swift */,
-			);
-			path = Usecases;
-			sourceTree = "<group>";
-		};
-		1BA8B75B2B05B29B00F25535 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				1BA8B7592B05B26800F25535 /* Enteties */,
-				1BA8B75A2B05B28B00F25535 /* Usecases */,
-				1BA8B75C2B05B2AE00F25535 /* Repository */,
-				1BA8B75D2B05B2D300F25535 /* Interfaces */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		1BA8B75C2B05B2AE00F25535 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		1BA8B75D2B05B2D300F25535 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		1BA8B75E2B05B31B00F25535 /* Prestentation */ = {
-			isa = PBXGroup;
-			children = (
-				1BA8B76C2B05D33A00F25535 /* Flows */,
-				1BA8B76B2B05CBAE00F25535 /* TabBarCoordinator */,
-				1BA8B76A2B05CB9500F25535 /* ShotPhotoScene */,
-				1BA8B7692B05CB8100F25535 /* ProfileScene */,
-				1BA8B7602B05B6F900F25535 /* PostScene */,
-			);
-			path = Prestentation;
-			sourceTree = "<group>";
-		};
-		1BA8B75F2B05B33700F25535 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				1BA8B76E2B05DA7500F25535 /* Network */,
-				1BA8B7612B05B71400F25535 /* Repositories */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		1BA8B7602B05B6F900F25535 /* PostScene */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PostScene;
-			sourceTree = "<group>";
-		};
-		1BA8B7612B05B71400F25535 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		1BA8B7692B05CB8100F25535 /* ProfileScene */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProfileScene;
-			sourceTree = "<group>";
-		};
-		1BA8B76A2B05CB9500F25535 /* ShotPhotoScene */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ShotPhotoScene;
-			sourceTree = "<group>";
-		};
-		1BA8B76B2B05CBAE00F25535 /* TabBarCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabBarCoordinator;
-			sourceTree = "<group>";
-		};
-		1BA8B76C2B05D33A00F25535 /* Flows */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Flows;
-			sourceTree = "<group>";
-		};
-		1BA8B76E2B05DA7500F25535 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		1BFDD6832AEF928D0067EFF9 /* TapBarController */ = {
 			isa = PBXGroup;
 			children = (
 				1B783E742AE6942D005252A8 /* TakePhotoViewController.swift */,
+				1BF9BC742B2AF9A200D62B33 /* PostViewController.swift */,
+				1BF9BC7A2B2BFF9600D62B33 /* SectionController.swift */,
+				1BF9BC7F2B2C530800D62B33 /* UserTabBarController.swift */,
+				1BF9BC782B2AF9F000D62B33 /* Cell.swift */,
 				1BFDD6862AEFA2BF0067EFF9 /* CalenderViewController.swift */,
 			);
 			path = TapBarController;
@@ -366,6 +228,7 @@
 				1B783E6A2AE6942D005252A8 /* Frameworks */,
 				1B783E6B2AE6942D005252A8 /* Resources */,
 				94537742FE39DF1665ECF0A5 /* [CP] Embed Pods Frameworks */,
+				1BF9BC7D2B2C400E00D62B33 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,7 +237,6 @@
 			name = Circle;
 			packageProductDependencies = (
 				1B23A4912AFC866100F46509 /* SnapKit */,
-				1B23A4932AFC866100F46509 /* SnapKit-Dynamic */,
 			);
 			productName = Circle;
 			productReference = 1B783E6D2AE6942D005252A8 /* Circle.app */;
@@ -478,36 +340,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BA8B82F2B07916500F25535 /* CheckLocationPermission.swift in Sources */,
+				1BF9BC762B2AF9A200D62B33 /* PostViewController.swift in Sources */,
 				1B95D25A2AF10C0100432271 /* PeopleViewModel.swift in Sources */,
-				1BB03D4A2AFDE4AF002B61C9 /* SectionController.swift in Sources */,
 				1BFDD6892AF0D88F0067EFF9 /* PersonView.swift in Sources */,
 				1B23D7512AEE5FE2003C4CF5 /* LoginViewController.swift in Sources */,
-				1BA8B8332B07926C00F25535 /* ViewPostsOnCalendar.swift in Sources */,
-				1BA8B81F2B078BE100F25535 /* Post.swift in Sources */,
-				1BA8B7672B05C56D00F25535 /* Location.swift in Sources */,
-				1BA8B8252B078FF800F25535 /* RegisterUser.swift in Sources */,
-				1BA8B8382B07935900F25535 /* GrantPhotoPermission.swift in Sources */,
 				1B783E752AE6942D005252A8 /* TakePhotoViewController.swift in Sources */,
 				1B23D74F2AEE5FBC003C4CF5 /* RegisterViewController.swift in Sources */,
 				1B23D7532AEE63C5003C4CF5 /* Contants.swift in Sources */,
-				1BEC07342AFE4135000F6036 /* PostCell.swift in Sources */,
-				1BA8B7632B05C54900F25535 /* User.swift in Sources */,
-				1BA8B8212B078C7900F25535 /* Comment.swift in Sources */,
+				1BF9BC7B2B2BFF9600D62B33 /* SectionController.swift in Sources */,
 				1B95D2582AF10AA600432271 /* Model.swift in Sources */,
 				1B95D25D2AF11A9600432271 /* PersonCollectionViewCell.swift in Sources */,
-				1BA8B8292B07913900F25535 /* EnableGPS.swift in Sources */,
-				1BA8B8362B07933A00F25535 /* FetchFriendList.swift in Sources */,
-				1BA8B83A2B08AA8A00F25535 /*  NotifyFriendsProximity .swift in Sources */,
-				1BA8B82B2B07914B00F25535 /* TakePhoto.swift in Sources */,
-				1BA8B8272B07913000F25535 /* AddFriend.swift in Sources */,
+				1BF9BC802B2C530800D62B33 /* UserTabBarController.swift in Sources */,
 				1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */,
-				1BA8B8232B078FE200F25535 /* CreatePost.swift in Sources */,
 				1B783E712AE6942D005252A8 /* AppDelegate.swift in Sources */,
-				1BA8B8312B0791AC00F25535 /* CheckProximityWithFriend.swift in Sources */,
-				1B23D74D2AEE5F7C003C4CF5 /* PostViewController.swift in Sources */,
-				1BA8B82D2B07915900F25535 /* UpdateUserLocation.swift in Sources */,
 				1B783E732AE6942D005252A8 /* SceneDelegate.swift in Sources */,
+				1BF9BC792B2AF9F000D62B33 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,11 +612,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1B23A4902AFC866100F46509 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		1B23A4932AFC866100F46509 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1B23A4902AFC866100F46509 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
