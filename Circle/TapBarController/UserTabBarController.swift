@@ -27,8 +27,8 @@ class UserTabBarController: UITabBarController {
         
         let nav1 = UINavigationController(rootViewController: vc1)
         let nav2 = UINavigationController(rootViewController: vc2)
-        tabBar.tintColor = .systemBlue
-        tabBar.backgroundColor = .systemGray6
+        tabBar.tintColor = .label
+        tabBar.backgroundColor = .systemGray3
         setViewControllers([nav1,nav2], animated: true)
     }
 

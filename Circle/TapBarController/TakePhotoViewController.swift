@@ -7,6 +7,7 @@
 import AVFoundation
 import UIKit
 
+
 class TakePhotoViewController: UIViewController {
 
     // Capture Session     // 屬性，用於儲存攝影機捕捉的影像
@@ -52,11 +53,14 @@ class TakePhotoViewController: UIViewController {
 
         let width = view.frame.size.width
         let height = view.frame.size.height
-        let size = min(width, height) * 0.5
+        let size = min(width, height) * 0.8
+        
         
         //相機視窗
-        previewlayer.frame = CGRect(x: (width - size) / 2, y:(height - size) / 2, width: view.frame.size.width * 0.5, height: view.frame.size.height * 0.5)
+        previewlayer.frame = CGRect(x: 0, y: 0, width: size, height: size)
+            
 
+//        view.frame.size.height * 0.5
         previewlayer.cornerRadius = 50
         
         

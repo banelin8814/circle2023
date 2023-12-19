@@ -38,3 +38,4 @@ final class Mycell : UICollectionViewCell {
         label.text = text
     }
 }
+

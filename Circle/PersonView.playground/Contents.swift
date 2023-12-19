@@ -97,7 +97,7 @@ private extension PersonView {
             
             personStackVw.topAnchor.constraint(equalTo: self.topAnchor,constant: 8),
             personStackVw.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -8),
-            personStackVw.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant:8 ),
+            personStackVw.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 8),
             personStackVw.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -8)
         ])
     }

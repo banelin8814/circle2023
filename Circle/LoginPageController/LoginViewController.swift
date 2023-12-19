@@ -8,32 +8,56 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    private let headerView = AuthHeaderView(title: "Sign In!", subTitle: "Sign in to continue")
+    private let usernameField = CustomTextField(fieldType: .username )
+    private let passwordField = CustomTextField(fieldType: .password)
+    
+    private lazy var loginStackView: UIStackView = {
+        let theStackView = UIStackView()
+        theStackView.translatesAutoresizingMaskIntoConstraints = false
+        theStackView.axis = .vertical
+        theStackView.spacing = 25
+        return theStackView
+    }()
+    
 
-    
-    @IBOutlet weak var emailTextField: UITextField!
-    
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-   
-}
-    
-    
-
-    
-
-//override func viewDidLoad() {
-//    super.viewDidLoad()
-//
-//    // Do any additional setup after loading the view.
-//}
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupUI()
+        view.backgroundColor = .systemBackground
     }
-    */
+    
+    
+    
+    
+    private func setupUI(){
+    
+        
+        self.view.addSubview(headerView)
+        self.view.addSubview(loginStackView)
+        loginStackView.addArrangedSubview(usernameField)
+        loginStackView.addArrangedSubview(passwordField)
+        
+        
 
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+                
+        NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 270),
+            
+            self.usernameField.heightAnchor.constraint(equalToConstant: 50),
+            self.passwordField.heightAnchor.constraint(equalToConstant: 50),
+            
+            loginStackView.topAnchor.constraint(equalTo: self.headerView.bottomAnchor ,constant: -20),
+            loginStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 25 ),
+            loginStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -25),
+            
+        ])
+            
+    }
+}
 
