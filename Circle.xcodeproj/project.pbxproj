@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1C9AA12B32D6DB004E6551 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C9AA02B32D6DB004E6551 /* ForgotPasswordViewController.swift */; };
+		1B1C9AA32B32D74C004E6551 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C9AA22B32D74C004E6551 /* HomeViewController.swift */; };
 		1B23A4922AFC866100F46509 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1B23A4912AFC866100F46509 /* SnapKit */; };
 		1B23D70B2AEE4FE5003C4CF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B23D70A2AEE4FE5003C4CF5 /* GoogleService-Info.plist */; };
 		1B23D74F2AEE5FBC003C4CF5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		1586A7A0096776504373FFEE /* Pods_Circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B1C9AA02B32D6DB004E6551 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		1B1C9AA22B32D74C004E6551 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1B23A4952AFC869900F46509 /* PeopleViewController.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PeopleViewController.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1B23A4962AFC86E400F46509 /* PeopleViewModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PeopleViewModel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1B23A4972AFC870E00F46509 /* Model.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Model.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -109,8 +113,10 @@
 		1B23D7492AEE5925003C4CF5 /* LoginPageController */ = {
 			isa = PBXGroup;
 			children = (
+				1B1C9AA22B32D74C004E6551 /* HomeViewController.swift */,
 				1B23D7502AEE5FE2003C4CF5 /* LoginViewController.swift */,
 				1B23D74E2AEE5FBC003C4CF5 /* RegisterViewController.swift */,
+				1B1C9AA02B32D6DB004E6551 /* ForgotPasswordViewController.swift */,
 			);
 			path = LoginPageController;
 			sourceTree = "<group>";
@@ -363,12 +369,14 @@
 				1B23D7512AEE5FE2003C4CF5 /* LoginViewController.swift in Sources */,
 				1B783E752AE6942D005252A8 /* TakePhotoViewController.swift in Sources */,
 				1BA14EDD2B317F7F000508B7 /* CustomButton.swift in Sources */,
+				1B1C9AA32B32D74C004E6551 /* HomeViewController.swift in Sources */,
 				1BA14ED92B305E1F000508B7 /* AuthHeaderView.swift in Sources */,
 				1B23D74F2AEE5FBC003C4CF5 /* RegisterViewController.swift in Sources */,
 				1B23D7532AEE63C5003C4CF5 /* Contants.swift in Sources */,
 				1BF9BC7B2B2BFF9600D62B33 /* SectionController.swift in Sources */,
 				1B95D2582AF10AA600432271 /* Model.swift in Sources */,
 				1BF9BC802B2C530800D62B33 /* UserTabBarController.swift in Sources */,
+				1B1C9AA12B32D6DB004E6551 /* ForgotPasswordViewController.swift in Sources */,
 				1BFDD6872AEFA2BF0067EFF9 /* CalenderViewController.swift in Sources */,
 				1B783E712AE6942D005252A8 /* AppDelegate.swift in Sources */,
 				1B783E732AE6942D005252A8 /* SceneDelegate.swift in Sources */,

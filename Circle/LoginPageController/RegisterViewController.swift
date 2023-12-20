@@ -9,40 +9,101 @@ import UIKit
 
 
 class RegisterViewController: UIViewController {
-    
-    
-    
-    @IBOutlet weak var emailTextField: UITextField!
-    
-    @IBOutlet weak var passwordTextField: UITextField!
+ 
+       
+       //MARK: - UI components
 
-    @IBAction func registerButton(_ sender: UIButton) {
+       private let headerView = AuthHeaderView(title: "Sign Up", subTitle: "Create your  count")
+       private let usernameField = CustomTextField(fieldType: .username)
+        private let emailField = CustomTextField(fieldType: .email)
+
+       private let passwordField = CustomTextField(fieldType: .password)
+       private let signInButton = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
+       private let newUserButton = CustomButton(title: "Create New Account" , fontSize: .med)
+       private let forgotPasswordButton = CustomButton(title: "Forgot Password?", fontSize: .small)
         
-        
-      
-    }
-    
-    
-    
-    
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-}
+       
+       private lazy var fieldStackView: UIStackView = {
+           let theStackView = UIStackView()
+           theStackView.translatesAutoresizingMaskIntoConstraints = false
+           theStackView.axis = .vertical
+           theStackView.spacing = 25
+           return theStackView
+       }()
+       private lazy var loginStackView: UIStackView = {
+           let theStackView = UIStackView()
+           theStackView.translatesAutoresizingMaskIntoConstraints = false
+           theStackView.axis = .vertical
+           theStackView.spacing = 10
+           return theStackView
+       }()
+       
+       //MARK: - L iftCycle
+
+       override func viewDidLoad() {
+           super.viewDidLoad()
+           self.view.backgroundColor = .white
+           self.setupUI()
+           self.signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
+           self.newUserButton.addTarget(self, action: #selector (didTapNewUser), for: .touchUpInside)
+           self.forgotPasswordButton.addTarget(self, action: #selector (didTapForgotPassword), for: .touchUpInside)
+       }
+       override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           self.navigationController?.navigationBar.isHidden = true
+
+       }
+       private func setupUI(){
+       
+           
+           self.view.addSubview(headerView)
+           self.view.addSubview(fieldStackView)
+           self.view.addSubview(loginStackView)
+           fieldStackView.addArrangedSubview(usernameField)
+           fieldStackView.addArrangedSubview(passwordField)
+           fieldStackView.addArrangedSubview(emailField)
+           loginStackView.addArrangedSubview(signInButton)
+           loginStackView.addArrangedSubview(newUserButton)
+           loginStackView.addArrangedSubview(forgotPasswordButton)
+
+           headerView.translatesAutoresizingMaskIntoConstraints = false
+                   
+           NSLayoutConstraint.activate([
+               headerView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
+               headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+               headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+               headerView.heightAnchor.constraint(equalToConstant: 270),
+               
+               self.usernameField.heightAnchor.constraint(equalToConstant: 50),
+               self.passwordField.heightAnchor.constraint(equalToConstant: 50),
+               
+               fieldStackView.topAnchor.constraint(equalTo: self.headerView.bottomAnchor ,constant: -20),
+               fieldStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 25),
+               fieldStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -25),
+               
+               loginStackView.topAnchor.constraint(equalTo: fieldStackView.bottomAnchor, constant: 20),
+               loginStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 25),
+               loginStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -25),
+           ])
+       }
+       //MARK: - Selectors
+       @objc private func  didTapSignIn(){
+           print("1")
+           let vc = HomeViewController()
+           vc.modalPresentationStyle = .fullScreen
+           self.present (vc, animated: false, completion: nil)
+       }
+       @objc private func didTapNewUser(){
+           print("2")
+           let vc = RegisterViewController()
+           self.navigationController?.pushViewController(vc, animated: true)
+       }
+       @objc private  func didTapForgotPassword(){
+           print("3")
+           let vc = ForgotPasswordViewController()
+           self.navigationController?.pushViewController(vc, animated: true)
+       }
+
+   }
+
+

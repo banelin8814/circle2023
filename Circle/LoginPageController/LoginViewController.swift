@@ -9,37 +9,57 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    private let headerView = AuthHeaderView(title: "Sign In!", subTitle: "Sign in to continue")
-    private let usernameField = CustomTextField(fieldType: .username )
+    //MARK: - UI components
+
+    private let headerView = AuthHeaderView(title: "Sign In ", subTitle: "Sign in to continue")
+    private let usernameField = CustomTextField(fieldType: .username)
     private let passwordField = CustomTextField(fieldType: .password)
+    private let signInButton = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
+    private let newUserButton = CustomButton(title: "Create New Account" , fontSize: .med)
+    private let forgotPasswordButton = CustomButton(title: "Forgot Password?", fontSize: .small)
+     
     
-    private lazy var loginStackView: UIStackView = {
+    private lazy var fieldStackView: UIStackView = {
         let theStackView = UIStackView()
         theStackView.translatesAutoresizingMaskIntoConstraints = false
         theStackView.axis = .vertical
         theStackView.spacing = 25
         return theStackView
     }()
+    private lazy var loginStackView: UIStackView = {
+        let theStackView = UIStackView()
+        theStackView.translatesAutoresizingMaskIntoConstraints = false
+        theStackView.axis = .vertical
+        theStackView.spacing = 10
+        return theStackView
+    }()
     
+    //MARK: - LiftCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         self.setupUI()
-        view.backgroundColor = .systemBackground
+        self.signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
+        self.newUserButton.addTarget(self, action: #selector (didTapNewUser), for: .touchUpInside)
+        self.forgotPasswordButton.addTarget(self, action: #selector (didTapForgotPassword), for: .touchUpInside)
     }
-    
-    
-    
-    
-    private func setupUI(){
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+        self.didTapNewUser()
+    }
+    private func setupUI(){ 
     
         
         self.view.addSubview(headerView)
+        self.view.addSubview(fieldStackView)
         self.view.addSubview(loginStackView)
-        loginStackView.addArrangedSubview(usernameField)
-        loginStackView.addArrangedSubview(passwordField)
-        
-        
+        fieldStackView.addArrangedSubview(usernameField)
+        fieldStackView.addArrangedSubview(passwordField)
+        loginStackView.addArrangedSubview(signInButton)
+        loginStackView.addArrangedSubview(newUserButton)
+        loginStackView.addArrangedSubview(forgotPasswordButton)
 
         headerView.translatesAutoresizingMaskIntoConstraints = false
                 
@@ -52,12 +72,29 @@ class LoginViewController: UIViewController {
             self.usernameField.heightAnchor.constraint(equalToConstant: 50),
             self.passwordField.heightAnchor.constraint(equalToConstant: 50),
             
-            loginStackView.topAnchor.constraint(equalTo: self.headerView.bottomAnchor ,constant: -20),
-            loginStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 25 ),
-            loginStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -25),
+            fieldStackView.topAnchor.constraint(equalTo: self.headerView.bottomAnchor ,constant: -20),
+            fieldStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 25),
+            fieldStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -25),
             
+            loginStackView.topAnchor.constraint(equalTo: fieldStackView.bottomAnchor, constant: 20),
+            loginStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 50),
+            loginStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -50),
         ])
-            
     }
+    //MARK: - Selectors
+    @objc private func  didTapSignIn(){
+        let vc = HomeViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present (vc, animated: false, completion: nil)
+    }
+    @objc private func didTapNewUser(){
+        let vc = RegisterViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @objc private  func didTapForgotPassword(){
+        let vc = ForgotPasswordViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 }
 
